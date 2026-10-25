@@ -155,8 +155,8 @@ e uma cópia branca deslocada atrás; legenda numa segunda janela igual; crédit
 
 1. Folha de quadros dos momentos críticos e conserto antes de gerar vídeo.
 2. **Abrir o projeto no EffectCraft para a pessoa ver o preview no app.** Feche o app antes (`pkill -TERM -f "EffectCraft.app/Contents/MacOS/EffectCraft"`) e reabra com `open -a /Applications/EffectCraft.app projeto.ecproj`, senão ele mostra a versão antiga. Nada de prévia em mp4 no chat.
-3. Aplicar o retorno rápido e mandar de novo.
-4. Só depois do "sim": final em 4K/60 (`--resolution 2`). Avisar que demora e fechar apps pesados.
+3. Aplicar o retorno rápido, montar de novo e reabrir no app.
+4. O render final a pessoa faz no app. Só se ela pedir: final em 4K/60 (`--resolution 2`), avisando que demora e fechando apps pesados.
    - **Render em pedaços de 4 s** (`ferramentas/render_partes.sh`), cada um num processo novo. O render de 55 s numa tacada só morreu depois de 4h21 (memória), sem fechar o arquivo. Pedaços emendados com o concat do ffmpeg, sem recomprimir.
    - **Um render por vez num Mac de 16 GB.** Dois em paralelo funcionaram enquanto sobrava memória, depois entraram em troca e ficaram mais lentos que um só.
    - Ritmo medido: 13 a 27 min por pedaço de 4 s, ou seja, ~4 a 6 min por segundo de vídeo.
