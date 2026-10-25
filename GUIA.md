@@ -154,7 +154,7 @@ e uma cópia branca deslocada atrás; legenda numa segunda janela igual; crédit
 ## 8. Processo de entrega
 
 1. Folha de quadros dos momentos críticos e conserto antes de gerar vídeo.
-2. **Prévia de 15–20 s em meia resolução, com áudio.** Mandar e esperar o retorno.
+2. **Abrir o projeto no EffectCraft para a pessoa ver o preview no app.** Feche o app antes (`pkill -TERM -f "EffectCraft.app/Contents/MacOS/EffectCraft"`) e reabra com `open -a /Applications/EffectCraft.app projeto.ecproj`, senão ele mostra a versão antiga. Nada de prévia em mp4 no chat.
 3. Aplicar o retorno rápido e mandar de novo.
 4. Só depois do "sim": final em 4K/60 (`--resolution 2`). Avisar que demora e fechar apps pesados.
    - **Render em pedaços de 4 s** (`ferramentas/render_partes.sh`), cada um num processo novo. O render de 55 s numa tacada só morreu depois de 4h21 (memória), sem fechar o arquivo. Pedaços emendados com o concat do ffmpeg, sem recomprimir.
@@ -243,7 +243,7 @@ Código: `~/Downloads/NRR Day - Case/teste-abertura.jsx` (tela, palavra, cursor 
 - **Serifada itálica nas palavras-chave.** Playfair Display Bold Italic (Fontsource, instalada em ~/Library/Fonts) com `{ pf: true }` na palavra; mede com a mesma fonte e sai 12% maior pra casar a altura com a SF Pro.
 - **Metáfora visual tem de ser a coisa.** "Isso não parece um iceberg": uma linha d'água com a palavra embaixo não basta. Gerar a ilustração (Gemini Image) e fazer a câmera começar na ponta e recuar até a massa submersa no tempo da palavra.
 - **Espaço entre foto e texto.** No gancho, foto, pílula e texto ficam juntos (uns 30 px), sem buraco no meio.
-- **Estúdio sem prévia.** Nos Reels do desafio, depois de conferir os quadros, abrir o projeto no app (`open -a /Applications/EffectCraft.app projeto.ecproj`) e ele renderiza. Se o app já estiver aberto, feche (kill -TERM) e reabra, senão ele mostra o projeto antigo.
+- **Sem prévia, em qualquer vídeo.** Vale para todo motion: depois de conferir os quadros, abrir o projeto no app (`open -a /Applications/EffectCraft.app projeto.ecproj`) e ele renderiza. Se o app já estiver aberto, feche (kill -TERM) e reabra, senão ele mostra o projeto antigo.
 
 ## Lições do Reel do dossiê (21/10/2026)
 

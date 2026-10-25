@@ -38,7 +38,7 @@ Leia antes de começar:
    Marca citada = logo em branco e grande; app citado = ícone oficial.
 9. **SF Pro**, tracking −25, Semibold no corpo e Bold no destaque, entrelinha ~1,18×. Ícones de traço (Tabler) que se desenham com Trim Path, em destaque com brilho. Marca citada = a logo dela, em branco.
 12. **O roteiro passa pela aprovação dele antes de produzir.** Mostrar as falas, ajustar, e só então gerar voz. Variar o CTA entre episódios; gancho com o case nos 3 primeiros segundos.
-10. **Prévia de 15–20 s em meia resolução, com áudio, antes de qualquer render longo.** O 4K só depois do "sim".
+10. **Nada de prévia renderizada no chat.** Quando a montagem terminar e os quadros-chave estiverem conferidos, abra o projeto no EffectCraft para a pessoa ver o preview no próprio app (`pkill -TERM -f "EffectCraft.app/Contents/MacOS/EffectCraft"; open -a /Applications/EffectCraft.app projeto.ecproj`: com o app aberto, sem fechar e reabrir ele mostra o projeto antigo). Ela assiste, pede ajustes e renderiza. Só renderize se ela pedir.
 11. Sem rosto dele, sem rótulos decorativos que ele não pediu e sem "assinatura". Responder em português.
 
 ## Processo
@@ -53,8 +53,8 @@ Leia antes de começar:
    de cada transição, cada destaque. Ver os quadros e corrigir antes de qualquer vídeo.
 5. **Mixar** (`exemplos/guarana-jesus/mix.py`): voz + trilha com ducking + whoosh em cada troca, pop
    nos ícones, impacto nos destaques, glitch curto (0,45 s), som do próprio clipe de IA; loudnorm −14.
-6. **Prévia** com `ferramentas/render.sh previa …` e mandar. Aplicar o retorno rápido.
-7. **Final** com `ferramentas/render.sh final …` (4K = `--resolution 2`, 60 fps).
+6. **Abrir no EffectCraft** para a pessoa ver o preview (regra 10). Aplicar o retorno rápido, montar de novo e reabrir.
+7. **Render:** a pessoa renderiza no app. Só se ela pedir: `ferramentas/render.sh final …` (4K = `--resolution 2`, 60 fps).
 8. **Ficha técnica** com `ferramentas/conta_tokens.py` e o % de sessão (ver `referencias/ficha-tecnica.md`).
 9. Entregar em `~/Downloads/<projeto>/` (vídeo, legenda, ficha) e no WhatsApp dele (`ferramentas/enviar_whatsapp.sh`). Nada de artefato publicado.
 
